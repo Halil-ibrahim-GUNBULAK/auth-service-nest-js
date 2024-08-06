@@ -1,9 +1,6 @@
 import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
-import {
-  DocumentBuilder,
-  SwaggerModule,
-} from "@nestjs/swagger";
+import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
@@ -12,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.setGlobalPrefix("api");
   const config = new DocumentBuilder()
-    .setTitle("youtube-mustafafiliz")
+    .setTitle("Auth-Swagger")
     .setVersion("1.0")
     .addBearerAuth(
       {
